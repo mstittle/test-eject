@@ -6,5 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 export const x =     'x';
 
+export function yy() { };
+
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
