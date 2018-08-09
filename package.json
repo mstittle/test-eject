@@ -46,6 +46,14 @@
     "test": "node scripts/test.js --env=jsdom",
     "lint": "eslint ./src"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
+  },  
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
